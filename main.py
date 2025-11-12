@@ -9,12 +9,8 @@ def hash_password(pwd) :
 
 
 def validate_password(pwd, hashed) :
-    try:
-        password_bytes = hash_password(pwd).encode('utf-8')
-        hashed_bytes = hashed.encode('utf-8')
-        return bcrypt.checkpw(password_bytes, hashed_bytes)
-    except:
-        return False
+    bol = bcrypt.checkpw(pwd, hashed)
+    return bol
 
 def register_user():
     user_name = input("Enter username: ")
@@ -38,7 +34,8 @@ def login_user(username, password):
             lines = f.readlines()
             for line in lines: 
                 u_name, hash =line.strip().split(':')
-                if u_name == username and validate_password(password, hash):
+                vld = validate_password(password, hash)
+                if u_name == username and vld == True:
                     return validate_password(password, hash)
                 else:
                     print("Invalid username or password")
