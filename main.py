@@ -6,46 +6,30 @@ def hash_password(pwd) :
     hashed = bcrypt.hashpw(password_bytes, salt)
     return hashed.decode('utf-8')
 
-
-
 def validate_password(pwd, hashed) :
-    bol = bcrypt.checkpw(pwd, hashed)
-    return bol
+    pwd_ = pwd.encode('utf-8')
+    hashed_ = hashed.encode('utf-8')
+    return bcrypt.checkpw(pwd_, hashed_)
 
 def register_user():
     user_name = input("Enter username: ")
     password = input("Enter password:  ") 
     hashed_password = hash_password(password)
-    try:
-        with open('users.txt', 'a') as f:
-            f.write(f"{user_name}: {hashed_password}\n")
-        print(hashed_password)
-    except:
-        print("File operation error!")
-
+    with open('users.txt', 'a') as f:
+        f.write(f"{user_name},{hashed_password}\n")
+    print(hashed_password)
 
 def login_user(username, password):
-    
-    try:
-        lines = ""
-        u_name = ""
-        hash = ""
-        with open('users.txt', 'r') as f:
-            lines = f.readlines()
-            for line in lines: 
-                u_name, hash =line.strip().split(':')
-                vld = validate_password(password, hash)
-                if u_name == username and vld == True:
-                    return validate_password(password, hash)
-                else:
-                    print("Invalid username or password")
-                    return False
-    except IOError:
-        print("File IO Error in the login_user function")
-    except:
-        print("Error in the login_user function")
-    finally:
-        f.close()
+    with open('users.txt', 'r') as f:
+        users_ = f.readlines()
+        for user in users_:
+            user_name,hash = user.strip().split(',')
+            if user_name == username:
+                return validate_password(password, hash)
+
+
+
+
 
 
     

@@ -15,19 +15,14 @@ def main():
             register_user()
 
         elif choice == '2':
-            try:
-                user_name = input("Enter username: ")
-                pass_word = input("Enter password: ")
-                print(login_user(user_name, pass_word))
-            except ValueError as v:
-                print(f"\nValue Error: {v}\n")
-            except TypeError as t:
-                print(f"Type Error: {t}")
+            user_name = input("Enter username: ")
+            pass_word = input("Enter password: ")
+            login_user(user_name,pass_word)
+            print('log in succesful !!')
         elif choice == '3':
             print('Bye, take care!')
             break
-        else:
-            print("Invalid choice, please try again.\n")
+
 
 if __name__ == "__main__":
     main()
