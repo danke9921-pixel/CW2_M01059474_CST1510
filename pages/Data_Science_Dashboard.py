@@ -12,7 +12,7 @@ st.title("Data Science Dashboard")
 
 # Load the Data Science project dataset stored inside the DATA folder
 # Make sure this filename matches the one you created earlier
-df = pd.read_csv("DATA/datascience_projects.csv", parse_dates=["date"])
+df = pd.read_csv("DATA/data_science.csv", parse_dates=["date"])
 
 # Allow the user to view the full dataset if they wish to inspect it
 with st.expander("Show project data"):
@@ -89,3 +89,4 @@ issues_chart = (
 )
 
 st.altair_chart(issues_chart, use_container_width=True)
+# End of Data Science Dashboard code 
