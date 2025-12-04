@@ -1,0 +1,16 @@
+city,project,tasks_completed,active_issues,performance_score,date
+Sarajevo,Server Patch Management,28,3,88,2025-01-04
+Mostar,Network Security Audit,22,2,91,2025-01-06
+Belgrade,Cloud Infrastructure Scaling,35,4,93,2025-01-08
+Zagreb,Disaster Recovery Testing,30,5,85,2025-01-10
+Ljubljana,Virtualisation Upgrade,27,3,89,2025-01-11
+Sarajevo,Database Backup Automation,19,4,82,2025-01-13
+Mostar,Firewall Policy Review,24,2,90,2025-01-14
+Belgrade,Monitoring System Deployment,33,3,94,2025-01-15
+Zagreb,Helpdesk Workflow Optimisation,21,5,80,2025-01-16
+Ljubljana,Identity Access Management,29,4,87,2025-01-17
+Sarajevo,Email Server Migration,26,3,86,2025-01-18
+Mostar,Load Balancer Configuration,20,2,88,2025-01-19
+Belgrade,Incident Response Drill,31,3,92,2025-01-20
+Zagreb,VPN Rollout for Remote Staff,23,4,84,2025-01-21
+Ljubljana,Container Orchestration Setup,28,3,90,2025-01-22

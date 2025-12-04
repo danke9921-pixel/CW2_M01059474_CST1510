@@ -1,14 +1,33 @@
+# Python cache
 __pycache__/
 *.pyc
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
 .env
+
+# IDE/editor files
 .vscode/
 .idea/
-.venv
-users.txt
-DATA/
-cyber_incidents.csv
-cybersecurity_incidents.db
-data_science.csv 
-datasets_metadata.csv
-it_tickets.csv 
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Secrets and sensitive files
+secrets.toml
+DATA/users.txt
+
+# Database files (keep local, not in repo)
+DATA/*.db
+
+# Temporary or one-time scripts
+DATA/fix_passwords.py
+DATA/hash_from_db.py
+DATA/import_datasets.py
+DATA/import_incidents.py
+DATA/import_tickets.py
+DATA/init_cyber_incidents.py
 

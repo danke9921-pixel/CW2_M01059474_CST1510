@@ -1,0 +1,74 @@
+# This is a chat page with memory and streaming that focuses on data science topics
+
+import streamlit as st
+from openai import OpenAI
+
+# Define the system prompt to get the assistant
+def system_prompt():
+    return (
+        "You are a data science assistant.\n"
+        "- Help with Python, pandas, and machine learning\n"
+        "- Explain concepts clearly\n"
+        "- Give examples when useful\n"
+        "- Keep answers short and practical"
+    )
+
+# Initialise the chat history if it doesn't exist
+def init_chat():
+    if "ds_msgs" not in st.session_state:
+        st.session_state.ds_msgs = [{"role": "system", "content": system_prompt()}]
+
+# This clears the chat history and restart which will take you back to system prompt
+def render_chat():
+    for msg in st.session_state.ds_msgs:
+        if msg["role"] != "system":
+            with st.chat_message(msg["role"]):
+                st.markdown(msg["content"])
+
+def clear_chat():
+    st.session_state.ds_msgs = [{"role": "system", "content": system_prompt()}]
+    st.rerun()
+
+# Title and icon professional and polished
+st.set_page_config(page_title="Data Science Assistant", page_icon="📊")
+st.title("Data Science Assistant")
+
+# This is a sidebar with a message count and includes a button to clear the chat
+with st.sidebar:
+    st.metric("Messages", len(st.session_state.get("ds_msgs", [])) - 1)
+    if st.button("Clear chat", use_container_width=True):
+        clear_chat()
+
+init_chat()
+render_chat()
+
+# Input for the user to ask about data science
+
+prompt = st.chat_input("Ask about data science …")
+if prompt:
+# This previews the user's message in the chatbot
+    with st.chat_message("user"):
+        st.markdown(prompt)
+    st.session_state.ds_msgs.append({"role": "user", "content": prompt})
+
+    # Link to OpenAI with your stored API key
+    client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+    stream = client.chat.completions.create(
+        model="gpt-4o",
+        messages=st.session_state.ds_msgs,
+        stream=True
+    )
+
+    # Preview the assistant's streamed response in real time
+    with st.chat_message("assistant"):
+        box = st.empty()
+        full = ""
+        for chunk in stream:
+            delta = chunk.choices[0].delta
+            if delta.content:
+                full += delta.content
+                box.markdown(full + " ▌")
+        box.markdown(full)
+
+    # This saves the assistant's whole response back into the chatbot history
+    st.session_state.ds_msgs.append({"role": "assistant", "content": full})

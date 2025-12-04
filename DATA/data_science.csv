@@ -1,0 +1,16 @@
+city,project,tasks_completed,active_issues,performance_score,date
+Sarajevo,Customer Segmentation,23,4,87,2025-01-04
+Mostar,Fraud Detection,19,2,92,2025-01-07
+Zagreb,Sales Forecasting,31,6,79,2025-01-10
+Split,NLP Chatbot Upgrade,27,3,88,2025-01-12
+Rijeka,Data Warehouse Migration,14,5,73,2025-01-14
+Belgrade,Computer Vision Quality Check,29,2,95,2025-01-18
+Novi Sad,Social Media Trend Analysis,22,4,82,2025-01-19
+Niš,Churn Prediction,18,3,86,2025-01-21
+Ljubljana,Health Analytics Platform,34,5,90,2025-01-11
+Maribor,AI Model Optimisation,26,4,85,2025-01-09
+Skopje,Traffic Prediction Model,17,3,83,2025-01-06
+Osijek,Energy Consumption Analytics,15,4,78,2025-01-08
+Belgrade,Anomaly Detection System,21,3,89,2025-01-10
+Sarajevo,Marketing Attribution Model,12,6,72,2025-01-16
+Zenica,Manufacturing Predictive Maintenance,25,5,84,2025-01-13

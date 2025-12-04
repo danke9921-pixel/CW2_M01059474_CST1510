@@ -8,8 +8,9 @@ if "logged_in" not in st.session_state or not st.session_state.logged_in:
     st.stop()
 
 # Clear title so the user knows exactly which dashboard they are viewing
-st.title("Data Science Dashboard")
-
+st.title("📊 Data Science Dashboard")
+st.subheader("""This dashboard gives a clear, friendly view of Data Science project performance across various cities.""")
+st.subheader("""It helps users explore a performance, tasks, and issues across different cities, with easy to read charts and timelines""")
 # Load the Data Science project dataset stored inside the DATA folder
 # Make sure this filename matches the one you created earlier
 df = pd.read_csv("DATA/data_science.csv", parse_dates=["date"])
@@ -46,6 +47,7 @@ else:
 
 # Bar chart showing how many tasks have been completed in each city
 st.subheader("Tasks Completed by City")
+st.write("""This bar chart shows the total number of tasks completed in each city.""")
 
 tasks_chart = (
     alt.Chart(df)
@@ -62,6 +64,7 @@ st.altair_chart(tasks_chart, use_container_width=True)
 
 # Line chart showing how project performance has changed over time 
 st.subheader("Performance Timeline")
+st.write("""Performance trend of recent activities.""")
 
 performance_chart = (
     alt.Chart(filtered_df)
@@ -77,6 +80,7 @@ st.altair_chart(performance_chart, use_container_width=True)
 
 # Pie chart showing the number of active issues for each city
 st.subheader("Active Issues Breakdown")
+st.write("""This pie chart illustrates the distribution of active issues across different cities.""")
 
 issues_chart = (
     alt.Chart(df)

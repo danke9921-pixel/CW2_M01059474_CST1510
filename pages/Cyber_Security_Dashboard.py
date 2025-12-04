@@ -8,7 +8,9 @@ if "logged_in" not in st.session_state or not st.session_state.logged_in:
     st.stop()
 
 # Have a clear title for the dashboard so users know which section they're in
-st.title("Cyber Security Dashboard")
+st.title("📊Cyber Security Dashboard")
+st.subheader("""This dashboard presents a secure and interactive view of recorder cyber security incidents.""")
+st.subheader(""" It allows key statistics, allows filtering by type, and provides clear visualtion of severity & timelines""")
 
 # Load the Cyber Security data from the CSV file stored inside the DATA Folder 
 # Verify whether that filename below matches the one saved from earlier 
@@ -43,6 +45,7 @@ else:
 # Bar chart that previews how many incidents occurred for each type
 # This helps highlight which threats happen most frequently. 
 st.subheader("Incidents by Type")
+st.write("""This bar chart shows the distribution of incidents by their type and the count of records.""")
 
 type_chart = (
     alt.Chart(df)
@@ -59,6 +62,7 @@ st.altair_chart(type_chart, use_container_width=True)
 
 # This is a decomposed breakdown of incident severity so users are able to see how serious the issues are as a whole 
 st.subheader("Severity Breakdown")
+st.write("""This pie chart illustrates the proportion of incidents by their severity level.""")
 
 severity_chart = (
     alt.Chart(df)
@@ -74,6 +78,7 @@ st.altair_chart(severity_chart, use_container_width=True)
 
 # Make sure the user is authenticated before loading any of the dashboard content. 
 st.subheader("Incident Timeline")
+st.write("""This line chart displays the timeline of incidents over time, allowing for trend analysis.""")
 
 timeline_chart = (
     alt.Chart(filtered_df)

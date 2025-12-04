@@ -1,0 +1,21 @@
+date,type,severity,source,location
+2024-02-01,Brute Force Attack,High,Firewall-03,Sarajevo
+2024-02-02,Phishing Email,Medium,Email-Gateway-11,Zagreb
+2024-02-03,SQL Injection,High,WebServer-02,Belgrade
+2024-02-04,Malware Infection,Low,Laptop-07,Rijeka
+2024-02-06,DDoS Attempt,High,Public-IP-91,Skopje
+2024-02-07,Data Exfiltration,High,Endpoint-14,Podgorica
+2024-02-08,Ransomware,High,Server-06,Mostar
+2024-02-09,Insider Misuse,Medium,Employee-012,Ljubljana
+2024-02-10,Privilege Escalation,High,Server-19,Novi Sad
+2024-02-11,Zero-Day Exploit,High,WebServer-04,Maribor
+2024-02-12,Password Spray Attack,Medium,AD-Controller-01,Sarajevo
+2024-02-13,Malware Infection,Low,Laptop-21,Dubrovnik
+2024-02-14,Phishing Email,Medium,Email-Gateway-10,Zagreb
+2024-02-15,Man-in-the-Middle Attack,High,VPN-Gateway-02,Belgrade
+2024-02-16,Data Breach,High,Database-02,Mostar
+2024-02-17,Unauthorised Access,Low,Laptop-33,Skopje
+2024-02-18,Ransomware,High,Server-11,Ljubljana
+2024-02-19,Insider Misuse,Medium,Employee-022,Novi Sad
+2024-02-20,Command and Control Traffic,High,Firewall-07,Rijeka
+2024-02-21,Policy Violation,Low,Employee-018,Split
