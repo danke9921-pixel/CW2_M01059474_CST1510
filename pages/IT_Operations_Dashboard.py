@@ -1,3 +1,11 @@
+# Author: Djani Colakovic
+# Student ID: M01059474
+# Module: CST1510 - Programming for Data Communication and Networks
+# Description:
+# This dashboard visualises IT ticket information, including ticket status,
+# priority levels, and resolution times. It provides an overview of operational
+# workload and performance.
+
 import streamlit as st
 import pandas as pd
 import altair as alt

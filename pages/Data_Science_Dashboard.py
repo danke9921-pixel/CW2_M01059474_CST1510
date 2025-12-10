@@ -1,3 +1,12 @@
+# Author: Djani Colakovic
+# Student ID: M01059474
+# Module: CST1510 - Programming for Data Communication and Networks
+# Description:
+# This dashboard presents dataset summaries, metadata, and category breakdowns.
+# It helps users understand the structure and composition of each dataset in
+# the system.
+
+
 import streamlit as st
 import pandas as pd
 import altair as alt

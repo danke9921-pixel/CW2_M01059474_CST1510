@@ -1,3 +1,11 @@
+# Author: Djani Colakovic
+# Student ID: M01059474
+# Module: CST1510 - Programming for Data Communication and Networks
+# Description:
+# This Streamlit dashboard displays cybersecurity incident data, including
+# severity levels, incident types, and overall trends. It provides users with
+# clear visual insights into security-related activity.
+
 import streamlit as st
 import pandas as pd
 import altair as alt

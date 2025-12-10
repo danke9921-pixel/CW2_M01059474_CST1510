@@ -1,5 +1,9 @@
-# This is a chat page with memory and streaming that focuses on data science topics
-
+# Author: Djani Colakovic
+# Student ID: M01059474
+# Module: CST1510 - Programming for Data Communication and Networks
+# Description:
+# This optional AI assistant helps users interpret datasets by generating
+# explanations, summaries, and analytical insights.
 import streamlit as st
 from openai import OpenAI
 

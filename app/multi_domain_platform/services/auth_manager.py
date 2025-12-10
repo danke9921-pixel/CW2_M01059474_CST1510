@@ -1,3 +1,10 @@
+# Author : Djani Colakovic
+# Student ID: M01059474
+# Module: CST1510 - Programming and Data Communication Networks
+# Description:
+# This module manages all authentcation processes, including password hashing
+# and user verification using bcrypt. It ensures that user credentials are stored securely and that login attempts are validated correctly.
+
 import os
 import sqlite3
 import bcrypt

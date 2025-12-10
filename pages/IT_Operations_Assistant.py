@@ -1,5 +1,9 @@
-# This is a chat page with memory and streaming that focuses on IT operations topics
-
+# Author: Djani Colakovic
+# Student ID: M01059474
+# Module: CST1510 - PProgramming for Data Communication and Networks
+# Description:
+# This optional AI assistant provides analysis and commentary on IT ticket data,
+# helping users understand operational patterns and workload.
 import streamlit as st
 from openai import OpenAI
 

@@ -1,6 +1,10 @@
 # Cybersecurity AI Assistant 
-
-# This is a chat page with memory and streaming that relies on cybersecurity
+# Author: Djani Colakovic
+# Student ID: M01059474
+# Module: CST1510 - Programming for Data Communication and Networks
+# Description:
+# This optional AI assistant analyses cybersecurity incidents and provides
+# generated insights to support user understanding and decision-making.
 
 import streamlit as st
 from openai import OpenAI
