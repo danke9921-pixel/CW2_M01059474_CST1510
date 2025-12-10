@@ -1,7 +1,7 @@
 import sqlite3
 
 # This is my direct  path to my actual database
-DB_PATH = r"C:\Users\djani\Documents\MDX Level 4\Programming and Data Communication Networks\CW2_M01059474_CST1510\DATA\intelligence_platforms.db"
+DB_PATH = r"DATA/intelligence_platforms.db"
 
 
 # --- CREATE TABLE ---

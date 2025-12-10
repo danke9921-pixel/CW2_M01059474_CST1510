@@ -10,7 +10,7 @@ import sqlite3
 import bcrypt
 
 #  Dynamically resolve the path to the database file in DATA folder
-DB_PATH = r"C:\Users\djani\Documents\MDX Level 4\Programming and Data Communication Networks\CW2_M01059474_CST1510\DATA\intelligence_platforms.db"
+DB_PATH = r"DATA/intelligence_platforms.db"
 
 #  Ensure the DATA folder exists
 os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
