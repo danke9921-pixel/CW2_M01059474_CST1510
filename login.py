@@ -1,4 +1,10 @@
-# login.py
+# Author : Djani Colakovic
+# Student ID: M01059474
+# Module: CST1510 - Programming for Data Communication and Networks
+# Description:
+# This file handles the user login and registration interface. 
+# It collects user credentials, sends them to the authentication manager for verfication
+# and directs the user to the appropriate dashboard once authenticated.
 import streamlit as st
 import sys
 from pathlib import Path
